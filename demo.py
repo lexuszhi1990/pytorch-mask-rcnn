@@ -74,7 +74,6 @@ image = skimage.io.imread(os.path.join(IMAGE_DIR, random.choice(file_names)))
 results = model.detect([image])
 
 # Visualize results
-r = results[0]
-visualize.display_instances(image, r['rois'], r['masks'], r['class_ids'],
-                            class_names, r['scores'])
-plt.show()
+res = results[0]
+visualize.display_instances(image, res['rois'], res['masks'], res['class_ids'], class_names, res['scores'])
+# plt.show()
